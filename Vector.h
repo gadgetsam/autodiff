@@ -6,14 +6,16 @@
 #define AUTODIFF_VECTOR_H
 #include "Eigen/Eigen"
 #include <iostream>
+#include "Model.h"
 
 using Eigen::MatrixXd;
 
 class Vector {
 MatrixXd* data;
+Model* model;
 
 public:
-    Vector(MatrixXd inp) {
+    explicit Vector(MatrixXd inp) {
         data = &inp;
     }
 

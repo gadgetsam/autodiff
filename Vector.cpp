@@ -4,3 +4,7 @@
 
 #include "Vector.h"
 
+Vector operator+ (const Vector& a, const Vector& b) {
+
+    return Vector(a.extract()*b.extract());
+}
